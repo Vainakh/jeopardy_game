@@ -8,6 +8,8 @@
 
 * {
   background-color: #115ff4;
+  padding: 10px;
+
 }
 
 h1 {
@@ -34,52 +36,52 @@ button {
 
 
 table, th, td {
-  border: 1px solid black;
-  table-layout:fixed;;
-  grid-auto-columns:auto;
+  /* border: 1px solid black; */
+  /* table-layout:fixed;;
+  grid-auto-columns:auto; */
 }
-
-
-
-
 
 table {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 55%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
   /* top: 150px;
   left: 400px; */
-  height: 70vh;
+  /* height: 70vh;
   width: 90vh;
-  background-color: #060ce9;
+  background-color: #060ce9;*/
   align-content: center;
 }
 
 #container th {
-  top: 50px;
+  /* top: 50px;
   left: 70%;
   height: 1%;
   text-align: center;
   background-color: #115ff4;
+  
+  border: 1px solid #ddd; */
   color: white;
-  border: 1px solid #ddd;
-
+  text-transform: capitalize;
 }
 
 #container tr {
-  top: 50px;
+  /* top: 50px;
   left: 70%;
   height: 40px;
   text-align: center;
   background-color: #115ff4;
+  
+  border: 1px solid #ddd; */
   color: white;
-  border: 1px solid #ddd;
-
+  text-transform: capitalize;
 }
 
 thead {
-  height: 50px;
+  /* height: 50px; */
 }
 
 td {

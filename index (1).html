@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jeopardy</title>
+    <link href="https://fonts.googleapis.com/css?family=Copse&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="jeopardy.css">
+</head>
+<body>
+<h1>Jeopardy!</h1>
+<button id="start" onclick="startGame()" style="visibility: hidden;">Start!</button>
+<button id="loading" style="visibility: hidden;">Loading</button>
+<button id="restart" onclick="restartGame()" style="visibility: hidden;">Restart</button>
+<div id="loader" style="visibility: hidden;"></div>
+
+<table id="container" style="visibility: hidden;">
+
+    <tr class="categories">
+        <th class="categories-head-0"></th>
+        <th class="categories-head-1"></th>
+        <th class="categories-head-2"></th>
+        <th class="categories-head-3"></th>
+        <th class="categories-head-4"></th>
+        <th class="categories-head-5"></th>
+    </tr>
+
+    <tr class="questions">
+        <td class="row-0-categories-col-0-answer cell"></td>
+        <td class="row-0-categories-col-0-question cell"></td>
+        <td class="row-0-categories-col-0-intial cell">?</td>
+        <td class="row-0-categories-col-1-answer cell"></td>
+        <td class="row-0-categories-col-1-question cell"></td>
+        <td class="row-0-categories-col-1-intial cell">?</td>
+        <td class="row-0-categories-col-2-answer cell"></td>
+        <td class="row-0-categories-col-2-question cell"></td>
+        <td class="row-0-categories-col-2-intial cell">?</td>
+        <td class="row-0-categories-col-3-answer cell"></td>
+        <td class="row-0-categories-col-3-question cell"></td>
+        <td class="row-0-categories-col-3-intial cell">?</td>
+        <td class="row-0-categories-col-4-answer cell"></td>
+        <td class="row-0-categories-col-4-question cell"></td>
+        <td class="row-0-categories-col-4-intial cell">?</td>
+        <td class="row-0-categories-col-5-answer cell"></td>
+        <td class="row-0-categories-col-5-question cell"></td>
+        <td class="row-0-categories-col-5-intial cell">?</td>
+    </tr>
+
+    <tr class="questions">
+        <td class="row-1-categories-col-0-answer cell"></td>
+        <td class="row-1-categories-col-0-question cell"></td>
+        <td class="row-1-categories-col-0-intial cell">?</td>
+        <td class="row-1-categories-col-1-answer cell"></td>
+        <td class="row-1-categories-col-1-question cell"></td>
+        <td class="row-1-categories-col-1-intial cell">?</td>
+        <td class="row-1-categories-col-2-answer cell"></td>
+        <td class="row-1-categories-col-2-question cell"></td>
+        <td class="row-1-categories-col-2-intial cell">?</td>
+        <td class="row-1-categories-col-3-answer cell"></td>
+        <td class="row-1-categories-col-3-question cell"></td>
+        <td class="row-1-categories-col-3-intial cell">?</td>
+        <td class="row-1-categories-col-4-answer cell"></td>
+        <td class="row-1-categories-col-4-question cell"></td>
+        <td class="row-1-categories-col-4-intial cell">?</td>
+        <td class="row-1-categories-col-5-answer cell"></td>
+        <td class="row-1-categories-col-5-question cell"></td>
+        <td class="row-1-categories-col-5-intial cell">?</td>
+    </tr>
+
+    <tr class="questions">
+        <td class="row-2-categories-col-0-answer cell"></td>
+        <td class="row-2-categories-col-0-question cell"></td>
+        <td class="row-2-categories-col-0-intial cell">?</td>
+        <td class="row-2-categories-col-1-answer cell"></td>
+        <td class="row-2-categories-col-1-question cell"></td>
+        <td class="row-2-categories-col-1-intial cell">?</td>
+        <td class="row-2-categories-col-2-answer cell"></td>
+        <td class="row-2-categories-col-2-question cell"></td>
+        <td class="row-2-categories-col-2-intial cell">?</td>
+        <td class="row-2-categories-col-3-answer cell"></td>
+        <td class="row-2-categories-col-3-question cell"></td>
+        <td class="row-2-categories-col-3-intial cell">?</td>
+        <td class="row-2-categories-col-4-answer cell"></td>
+        <td class="row-2-categories-col-4-question cell"></td>
+        <td class="row-2-categories-col-4-intial cell">?</td>
+        <td class="row-2-categories-col-5-answer cell"></td>
+        <td class="row-2-categories-col-5-question cell"></td>
+        <td class="row-2-categories-col-5-intial cell">?</td>
+    </tr>
+
+    <tr class="questions">
+        <td class="row-3-categories-col-0-answer cell"></td>
+        <td class="row-3-categories-col-0-question cell"></td>
+        <td class="row-3-categories-col-0-intial cell">?</td>
+        <td class="row-3-categories-col-1-answer cell"></td>
+        <td class="row-3-categories-col-1-question cell"></td>
+        <td class="row-3-categories-col-1-intial cell">?</td>
+        <td class="row-3-categories-col-2-answer cell"></td>
+        <td class="row-3-categories-col-2-question cell"></td>
+        <td class="row-3-categories-col-2-intial cell">?</td>
+        <td class="row-3-categories-col-3-answer cell"></td>
+        <td class="row-3-categories-col-3-question cell"></td>
+        <td class="row-3-categories-col-3-intial cell">?</td>
+        <td class="row-3-categories-col-4-answer cell"></td>
+        <td class="row-3-categories-col-4-question cell"></td>
+        <td class="row-3-categories-col-4-intial cell">?</td>
+        <td class="row-3-categories-col-5-answer cell"></td>
+        <td class="row-3-categories-col-5-question cell"></td>
+        <td class="row-3-categories-col-5-intial cell">?</td>
+    </tr>
+
+    <tr class="questions">
+        <td class="row-4-categories-col-0-answer cell"></td>
+        <td class="row-4-categories-col-0-question cell"></td>
+        <td class="row-4-categories-col-0-intial cell">?</td>
+        <td class="row-4-categories-col-1-answer cell"></td>
+        <td class="row-4-categories-col-1-question cell"></td>
+        <td class="row-4-categories-col-1-intial cell">?</td>
+        <td class="row-4-categories-col-2-answer cell"></td>
+        <td class="row-4-categories-col-2-question cell"></td>
+        <td class="row-4-categories-col-2-intial cell">?</td>
+        <td class="row-4-categories-col-3-answer cell"></td>
+        <td class="row-4-categories-col-3-question cell"></td>
+        <td class="row-4-categories-col-3-intial cell">?</td>
+        <td class="row-4-categories-col-4-answer cell"></td>
+        <td class="row-4-categories-col-4-question cell"></td>
+        <td class="row-4-categories-col-4-intial cell">?</td>
+        <td class="row-4-categories-col-5-answer cell"></td>
+        <td class="row-4-categories-col-5-question cell"></td>
+        <td class="row-4-categories-col-5-intial cell">?</td>
+    </tr>
+
+</table>
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="https://unpkg.com/lodash"></script>
+<script src="jeopardy.js"></script>
+
+</body>
+</html>
